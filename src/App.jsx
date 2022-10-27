@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-
 import "./App.css";
 import { Square } from "./Square";
 
@@ -106,5 +105,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
