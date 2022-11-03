@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
+import { Square } from "./Square";
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       <h1 className="title">TicTacToe</h1>
       <h2>Player Turn:</h2>
 
-      <div className="board"></div>
+      <div className="board">
+        
+      </div>
 
       <button>Reset</button>
     </div>
