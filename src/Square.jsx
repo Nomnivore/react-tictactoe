@@ -1,7 +1,7 @@
-export const Square = () => {
+export const Square = ({ idx, value }) => {
   return (
     <div className="square">
-      Hi!
+      {value}
     </div>
-    );
+  );
 };
