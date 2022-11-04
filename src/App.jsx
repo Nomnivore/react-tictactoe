@@ -72,6 +72,7 @@ function App() {
 
     for (const condition of conditions) {
       if (
+        squares[condition[0]] &&
         squares[condition[0]] == squares[condition[1]] &&
         squares[condition[1]] == squares[condition[2]]
       ) {
