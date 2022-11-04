@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
 import { Square } from "./Square";
+import { random } from "./util";
 
 function App() {
   const [squares, setSquares] = useState(new Array(9).fill(null));
@@ -21,6 +22,26 @@ function App() {
       winMsg.current.innerText = "";
     }
   });
+
+  useEffect(() => {
+    if (!gameOver) {
+      const allSquares = document.getElementsByClassName("square");
+      const borders = [
+        "hidden",
+        "dotted",
+        "dashed",
+        "solid",
+        "double",
+        "groove",
+        "ridge",
+      ];
+
+      const newBorder = borders[random(borders.length) - 1];
+      for (const sq of allSquares) {
+        sq.style.borderStyle = newBorder;
+      }
+    }
+  }, [gameOver]);
 
   function squareClicked(idx) {
     if (gameOver) return;
